@@ -1,0 +1,24 @@
+{
+  "name": "functional-programming",
+  "version": "1.0.0",
+  "description": "In this course we are going to visualize data from the NMVW. The main goal is to make a concept which also can visually be presented in reality.",
+  "main": "index.js",
+  "dependencies": {
+    "d3": "^5.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorlaforga/functional-programming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorlaforga/functional-programming/issues"
+  },
+  "homepage": "https://github.com/victorlaforga/functional-programming#readme"
+}
