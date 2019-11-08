@@ -2,7 +2,7 @@
 
 In this course we are going to visualize data from the NMVW. The main goal is to make a concept which also can visually be presented in reality.
 
-###Concept
+### Concept
 
 For the concept we had the choice to make an application for Rik, or do something with Geo locations. I chose to make a concept for Rik because in my opinion geo location is already a variable which is very general.
 
