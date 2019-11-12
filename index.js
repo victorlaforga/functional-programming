@@ -15,30 +15,17 @@ SELECT ?lengte ?cho ?place ?placeRegio ?placeRegioName ?title ?pic WHERE {
 ?placeRegio skos:prefLabel ?placeRegioName .
   ?cho dct:extent ?lengte.
 } 
-`
-const url = "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-16/sparql"
-
+`;
+const url =
+  "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-16/sparql";
 
 const runQuery = (url, query) => {
-    // Call the url with the query attached, output data
-    fetch(url + "?query=" + encodeURIComponent(query) + "&format=json")
-      .then(res => res.json())
-      .then(json => {
-        const dataArray = (json.results.bindings); 
-      });
-  };
-  
-  
-        
+  // Call the url with the query attached, output data
+  fetch(url + "?query=" + encodeURIComponent(query) + "&format=json")
+    .then(res => res.json())
+    .then(json => {
+      const dataArray = json.results.bindings;
+    });
+};
 
-
-
-
-//   var filteredArray = dataArray.filter(function(data) {
-//     return dataArray.lengte.value.includes("l")
-// })
-// console.log(filteredArray)
-
-
-  
-  runQuery(url, query);
+runQuery(url, query);
