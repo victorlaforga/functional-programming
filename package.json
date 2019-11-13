@@ -4,6 +4,7 @@
   "description": "In this course we are going to visualize data from the NMVW. The main goal is to make a concept which also can visually be presented in reality.",
   "main": "index.js",
   "dependencies": {
+    "babel": "^6.23.0",
     "d3": "^5.12.0"
   },
   "devDependencies": {},

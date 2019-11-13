@@ -22,9 +22,12 @@ export const cleanData = lengthObjects.map(size => {
     if (size.charAt(0) != NaN) {
       return size.slice(0, 3);
     }
-
+    
   }
+
 });
 
 console.log(cleanData);
+
+
 

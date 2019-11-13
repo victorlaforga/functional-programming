@@ -1,0 +1,14 @@
+.container{
+    scrollbar-width: thin;
+    width: 75em;
+    height: 30em;
+    background-color: greenyellow;
+}
+
+.content{
+    overflow: auto ;
+    height: 28em;
+    width: 73em;
+    justify-content: center;
+    background-color: white;
+}
