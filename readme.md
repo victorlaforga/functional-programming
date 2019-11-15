@@ -28,6 +28,13 @@ Om de collectie te bekijken verwijs ik je naar: [https://collectie.wereldculture
 3. Ga naar je folder doormiddel van `cd functional-programming`
 4. Om de applicatie te runnen typ open het bestan index.html
 
+## Leerdoelen
+*Kennis maken met functional programming
+ *Kennis maken met de ES6 javascript syntax
+ *Kennis maken met D3
+ *Het maken van datavisualisaties met D3 door middel van data
+ *Het opschonen van opgehaalde data
+
 ## Mijn Wiki :notebook_with_decorative_cover:
 Als je meer wilt weten over mijn keuzes en mijn proces van dit project, verwijs ik je naar [Mijn Wiki](https://github.com/victorlaforga/functional-programming/wiki)
 

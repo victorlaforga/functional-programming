@@ -2,14 +2,13 @@ import { runQuery, url, query } from "./function.js";
 
 export function useData() {
   runQuery(url, query).then(results => {
-    // console.log("This is in useData!!!!", results);
+    
     const lengthObjects = results.map(results => results.lengte.value);
 
-    
     const cleanData = lengthObjects.map(size => {
       size = size.toLowerCase();
 
-      // regex expression which matches all characters exceptin between ()
+      // regex expression which matches all characters except in between ()
       size = size.replace(size.match(/\(.*?\)/g), "");
       // regex expression which matches all characters except: l, numbers, '.' , whitespace & x
       size = size.replace(/[^l0-9\d\sx.]/g, "");
@@ -42,14 +41,12 @@ export function useData() {
       newArr.regio = item.placeRegioName.value;
       return newArr;
     });
-
-    for(let count=0; count < restOfData.length;count++){
-
-      restOfData[count].size = dataIntoNumber[count]
-      }
+    // for loop gemaakt met Eyup & Robert
+    for (let count = 0; count < restOfData.length; count++) {
+      restOfData[count].size = dataIntoNumber[count];
+    }
     const restOfDataWithSize = restOfData;
     const data = restOfDataWithSize;
-    // const data = dataIntoNumber.sort(d3.ascending);
     const zoom = d3.zoom();
 
     // tooltip samen met Gio gemaakt
@@ -82,8 +79,6 @@ export function useData() {
       .on("click", d => {
         tooltip.style("visibility", "visible").text(d.title);
       })
-      // .append("svg:image")
-      // .attr("xlink:href",function(d) {return d.pic;})
       .attr("x", function(d, i) {
         return i * (barWidth + barOffset);
       })
