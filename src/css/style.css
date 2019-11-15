@@ -1,0 +1,24 @@
+
+#content{
+    position: relative;
+    height: 100vm;
+    width: 100vm;
+    justify-content: center;
+    background-color:antiquewhite;
+    overflow-x: scroll;
+  overflow-y: scroll;
+  white-space: nowrap;
+}
+
+rect {
+    fill: rgb(0, 195, 255);
+
+  }
+#content div {
+    top: 25px;
+    left: 25px;
+    padding: 15px;
+    border: 2px solid rgb(0, 195, 255);
+    border-radius: 10px;
+    
+}
