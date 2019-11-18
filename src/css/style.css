@@ -1,22 +1,37 @@
 
+body {
+  display: flex;
+  flex-direction: column;
+  background: #BBE4EA;
+}
+div svg {
+  margin-left: 45px;
+  margin-bottom: 30px;
+}
 #content{
     position: relative;
-    height: 100vm;
-    width: 100vm;
+    height: 50%;
+    width: 70%;
+    
     justify-content: center;
-    background-color:antiquewhite;
-    overflow-x: scroll;
-  overflow-y: scroll;
+    background-color:#79C2D0;
+    overflow: scroll;
+    left: 2%;
   white-space: nowrap;
 }
 
+h1 {
+margin-bottom: 50px;
+text-align: center;
+font-family: 'Josefin Sans', sans-serif;
+}
 rect {
-    fill: rgb(0, 195, 255);
+    fill: #5485B5;
 
   }
 #content div {
-    top: 25px;
-    left: 25px;
+    top: 125px;
+    left: 50px;
     padding: 15px;
     border: 2px solid rgb(0, 195, 255);
     border-radius: 10px;

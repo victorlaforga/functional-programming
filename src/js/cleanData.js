@@ -47,28 +47,45 @@ export function useData() {
     }
     const restOfDataWithSize = restOfData;
     const data = restOfDataWithSize;
-    const zoom = d3.zoom();
+    
 
     // tooltip samen met Gio gemaakt
     let tooltip = d3
       .select("#content")
       .append("div")
-      .style("position", "absolute")
+      .style("position", "fixed")
+      .style("overflow", "scroll")
       .style("visibility", "hidden");
     const width = 100000;
     const height = 550;
     const barWidth = 70;
     const barOffset = 5;
+    const scale = d3.scaleLinear()
+                  .domain([d3.min(data), d3.max(data)])
+                  .range([0, width - 100]);
+
+    // Add scales to axis
+    const y_axis = d3.axisLeft()
+                   .scale(scale);
+    const x_axis = d3.axisBottom()
+                     .scale(scale);    
+
+
+            
+                   
 
     const myChart = d3
       .select("#content")
       .append("svg")
+      .call(x_axis)
+      .call(y_axis)
       .attr("width", width)
       .attr("height", height)
       .selectAll("rect")
       .data(data)
       .enter()
       .append("rect")
+      
       .attr("width", barWidth)
       .attr("height", function(d) {
         return d.size;
@@ -77,7 +94,9 @@ export function useData() {
         tooltip.style("visibility", "hidden");
       })
       .on("click", d => {
-        tooltip.style("visibility", "visible").text(d.title);
+        tooltip.style("visibility", "visible")
+                .text(d.title);
+                
       })
       .attr("x", function(d, i) {
         return i * (barWidth + barOffset);
@@ -90,3 +109,4 @@ export function useData() {
   });
 }
 useData();
+
